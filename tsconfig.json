@@ -13,7 +13,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "CommonJS",
+    "module": "esnext",
     "outDir": "./dist",
     "rootDir": "./src",
     "moduleResolution": "node",
