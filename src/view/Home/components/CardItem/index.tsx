@@ -38,7 +38,7 @@ export const CardItem = ({ img, productList, title }: Props) => {
         open={openModal}
       />
       <CardProductTitle>{title}</CardProductTitle>
-      <CardProductQuantityEggs>10 ovos</CardProductQuantityEggs>
+      <CardProductQuantityEggs> {quantity.length ? quantity?.slice(0, 2) : 0} ovos</CardProductQuantityEggs>
       <CardProductDescriptionEggs>
         Galinhas criadas soltas
       </CardProductDescriptionEggs>
@@ -55,7 +55,7 @@ export const CardItem = ({ img, productList, title }: Props) => {
             value={`${options.quantityEggs} - ovos por R$ ${options.value}`}
           >
             {' '}
-            {options.quantityEggs} - ovos R$ {options.value}{' '}
+            {options.quantityEggs} - ovos {options.value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }).replace(".", ",")}{' '}
           </option>
         ))}
       </SelectedTypeQuantityEggs>
