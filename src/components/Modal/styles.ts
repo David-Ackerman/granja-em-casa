@@ -7,13 +7,13 @@ export const BackgroundStyled = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: auto;
+  z-index: 1000;
 `;
 
 export const ContainerStyled = styled.div`
   margin: 150px auto;
   background: #e8e8e8;
-  /* z-index: auto; */
+  z-index: auto;
   border-radius: 8px;
   width: 440px;
   height: 680px;
