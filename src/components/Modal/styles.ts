@@ -8,16 +8,31 @@ export const BackgroundStyled = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ContainerStyled = styled.div`
-  margin: 150px auto;
+  position: relative;
   background: #e8e8e8;
   z-index: auto;
   border-radius: 8px;
-  width: 440px;
-  height: 680px;
+  width: 90vw;
+  max-width: 500px;
+  height: 70%;
   padding: 80px 20px;
+  > button {
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #505050;
+    top: 10px;
+    right: 10px;
+  }
   > form {
     height: 100%;
     display: flex;
@@ -26,7 +41,7 @@ export const ContainerStyled = styled.div`
     align-items: center;
 
     > input {
-      width: 320px;
+      width: 90%;
       height: 45px;
       font-size: 16px;
       font-weight: 500;

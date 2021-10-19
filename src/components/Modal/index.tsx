@@ -57,6 +57,7 @@ export const Modal = ({ close, items, open }: ModalProps) => {
   return (
     <BackgroundStyled>
       <ContainerStyled>
+        <button onClick={close}>X</button>
         <form onSubmit={submit}>
           <input name="user_name" placeholder="Nome" type="text" />
           <input name="user_age" placeholder="Idade" type="number" />
