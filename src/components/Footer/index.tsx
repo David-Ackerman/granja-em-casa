@@ -1,11 +1,11 @@
 import React from 'react';
 import FooterSVG from '../../assets/footer.svg';
-import {Container, Title} from './styles';
+import { Container } from './styles';
 
 const Footer: React.FC = () => {
   return (
     <Container>
-      <img src={FooterSVG} />
+      <img src={FooterSVG} alt="Empresa fabricante"/>
     </Container>
   )
 }

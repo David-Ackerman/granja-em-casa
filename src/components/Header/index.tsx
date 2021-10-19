@@ -5,7 +5,7 @@ import { HeaderContainer } from './styles';
 const Header: React.FC = () => {
   return (
     <HeaderContainer>
-      <img src={Logo} width={900}  height={350}/>
+      <img src={Logo} width={900} height={350} alt="logo" />
     </HeaderContainer>
   )
 }

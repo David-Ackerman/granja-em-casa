@@ -170,7 +170,7 @@ const CardProduct: React.FC = () => {
             Galinhas criadas soltas
           </CardProductDescriptionEggs>
           <Icon>
-            <img src={ChickenRed} alt="ola" width={230} />
+            <img src={ChickenRed} width={230} alt="Ovos Vermelhos" />
           </Icon>
           <SelectedTypeQuantityEggs>
             <option value="0">Quantidade e Preço</option>
@@ -200,7 +200,7 @@ const CardProduct: React.FC = () => {
             Galinhas criadas soltas
           </CardProductDescriptionEggs>
           <Icon>
-            <img src={ChickenWhite} alt="ola" width={230} />
+            <img src={ChickenWhite} width={230} alt="Ovos Brancos" />
           </Icon>
           <SelectedTypeQuantityEggs>
             <option value="0">Quantidade e Preço</option>
@@ -230,7 +230,7 @@ const CardProduct: React.FC = () => {
             Galinhas criadas soltas
           </CardProductDescriptionEggs>
           <Icon>
-            <img src={ChickenBumpkin} alt="ola" width={230} />
+            <img src={ChickenBumpkin} width={230} alt="Ovos Caipiras" />
           </Icon>
 
           <SelectedTypeQuantityEggs>
@@ -261,7 +261,7 @@ const CardProduct: React.FC = () => {
             Galinhas criadas soltas
           </CardProductDescriptionEggs>
           <Icon>
-            <img src={ChickenOrganic} alt="ola" width={230} />
+            <img src={ChickenOrganic} width={230} alt="Ovos Caipiras Organicos" />
           </Icon>
           <SelectedTypeQuantityEggs>
             <option value="0">Quantidade e Preço</option>
