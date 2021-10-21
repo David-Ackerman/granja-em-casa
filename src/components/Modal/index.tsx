@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { BackgroundStyled, ContainerStyled } from './styles';
 import { apikey } from '../../services/emailkey';
@@ -13,8 +13,9 @@ type ModalProps = {
   close: () => void;
 };
 export const Modal = ({ close, items, open }: ModalProps) => {
-  emailjs.init('user_0TcZKbW38p30VqZEeQuyq');
-  if (!open) return <></>;
+  useEffect(() => {
+    emailjs.init(apikey.USER_ID);
+  }, []);
 
   const submit = (event: any) => {
     event.preventDefault();
@@ -22,23 +23,20 @@ export const Modal = ({ close, items, open }: ModalProps) => {
     const userName = event.currentTarget.user_name.value;
     const userAge = event.currentTarget.user_age.value;
     const userAddress = event.currentTarget.user_address.value;
-    const userTel = event.currentTarget.user_tel.value;
+    const userPhone = event.currentTarget.user_tel.value;
     const userEmail = event.currentTarget.user_name.value;
 
     const message = `
-      Necessario entrar em contato com o/a ${userName} para realizar orçamento de ${items.product} para frequência ${items.frequency}
-      na quantidade de ${items.quantity}.
-      
-      Dados do cliente:
-    
-      Nome: ${userName}
-      Idade: ${userAge}
-      Endereço: ${userAddress}
-      Telefone: ${userTel}
-      Email: ${userEmail}
+    Necessario entrar em contato com o/a ${userName} para realizar orçamento de ${items.product} para frequência ${items.frequency}
+    na quantidade de ${items.quantity}.
     `;
     emailjs
-      .send(`service_5biacen`, apikey.TEMPLATE_ID, { message }, apikey.USER_ID)
+      .send(
+        apikey.SERVICE_ID,
+        apikey.TEMPLATE_ID,
+        { message, userName, userAge, userAddress, userPhone, userEmail },
+        apikey.USER_ID
+      )
       .then(
         (result) => {
           alert(
@@ -54,6 +52,7 @@ export const Modal = ({ close, items, open }: ModalProps) => {
         }
       );
   };
+  if (!open) return <></>;
   return (
     <BackgroundStyled>
       <ContainerStyled>
@@ -64,7 +63,7 @@ export const Modal = ({ close, items, open }: ModalProps) => {
           <input name="user_address" placeholder="Endereço" type="text" />
           <input name="user_tel" placeholder="Telefone" type="tel" />
           <input name="user_email" placeholder="Email" type="email" />
-          <input type="submit" value="Enviar orçamento" />
+          <input type="submit" value="Confirmar" />
         </form>
       </ContainerStyled>
     </BackgroundStyled>

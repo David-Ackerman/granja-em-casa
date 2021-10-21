@@ -6,7 +6,6 @@ import {
   Button,
   CardProductContainer,
   CardProductDescriptionEggs,
-  CardProductFrequency,
   CardProductQuantityEggs,
   CardProductTitle,
   Icon,
@@ -38,7 +37,10 @@ export const CardItem = ({ img, productList, title }: Props) => {
         open={openModal}
       />
       <CardProductTitle>{title}</CardProductTitle>
-      <CardProductQuantityEggs> {quantity.length ? quantity?.slice(0, 2) : 0} ovos</CardProductQuantityEggs>
+      <CardProductQuantityEggs>
+        {' '}
+        {quantity.length ? quantity?.slice(0, 2) : 0} ovos
+      </CardProductQuantityEggs>
       <CardProductDescriptionEggs>
         Galinhas criadas soltas
       </CardProductDescriptionEggs>
@@ -55,15 +57,17 @@ export const CardItem = ({ img, productList, title }: Props) => {
             value={`${options.quantityEggs} - ovos por R$ ${options.value}`}
           >
             {' '}
-            {options.quantityEggs} - ovos {options.value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }).replace(".", ",")}{' '}
+            {options.quantityEggs} - ovos{' '}
+            {options.value
+              .toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+              .replace('.', ',')}{' '}
           </option>
         ))}
       </SelectedTypeQuantityEggs>
-      <CardProductFrequency>Escolha a periocidade:</CardProductFrequency>
       <SelectedTypeQuantityEggs
         onChange={(e) => setFrequency(e.currentTarget.value)}
       >
-        <option value="0">Quantidade e Preço</option>
+        <option value="0">Escolha a periocidade:</option>
         {planFrequency.map((options) => (
           <option key={options} value={options}>
             {' '}

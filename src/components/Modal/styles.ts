@@ -21,7 +21,7 @@ export const ContainerStyled = styled.div`
   width: 90vw;
   max-width: 500px;
   height: 70%;
-  padding: 80px 20px;
+  padding: 5% 20px;
   > button {
     position: absolute;
     background: none;

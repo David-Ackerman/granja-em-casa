@@ -39,12 +39,9 @@ export const SelectedTypeQuantityEggs = styled.select`
   padding: 10px;
   color: #000;
   text-decoration: none;
-`;
-
-export const CardProductFrequency = styled.p`
-  color: #f28705;
-  font-weight: 600;
-  margin-top: 15px;
+  &:last-of-type {
+    margin-top: 15px;
+  }
 `;
 
 export const Icon = styled.div`

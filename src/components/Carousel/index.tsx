@@ -1,6 +1,14 @@
 import React from 'react';
-import { Container } from './styles'
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from "mdbreact";
+import { Container } from './styles';
+import {
+  MDBCarousel,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView,
+  MDBContainer,
+} from 'mdbreact';
+import banner1 from '../../assets/banner1.png';
+import banner2 from '../../assets/banner2.png';
 
 const Carousel: React.FC = () => {
   return (
@@ -19,7 +27,7 @@ const Carousel: React.FC = () => {
               <MDBView>
                 <img
                   className="d-block w-100"
-                  src="https://assets.betalabs.net/production/aresdocampo/extra_fields/10/phpmuAaYb1608327143.jpg"
+                  src={banner1}
                   alt="First slide"
                 />
               </MDBView>
@@ -37,7 +45,7 @@ const Carousel: React.FC = () => {
               <MDBView>
                 <img
                   className="d-block w-100"
-                  src="https://assets.betalabs.net/production/aresdocampo/extra_fields/10/phpQnNbrt1607627553.jpg"
+                  src={banner2}
                   alt="Third slide"
                 />
               </MDBView>
@@ -46,7 +54,7 @@ const Carousel: React.FC = () => {
         </MDBCarousel>
       </MDBContainer>
     </Container>
-  )
-}
+  );
+};
 
 export default Carousel;
