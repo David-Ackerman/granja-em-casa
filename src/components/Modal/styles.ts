@@ -21,7 +21,7 @@ export const ContainerStyled = styled.div`
   width: 90vw;
   max-width: 500px;
   height: 70%;
-  padding: 5% 20px;
+  padding: 30px 20px;
   > button {
     position: absolute;
     background: none;
@@ -30,7 +30,7 @@ export const ContainerStyled = styled.div`
     font-size: 20px;
     font-weight: bold;
     color: #505050;
-    top: 10px;
+    top: 5px;
     right: 10px;
   }
   > form {

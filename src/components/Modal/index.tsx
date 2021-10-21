@@ -23,6 +23,7 @@ export const Modal = ({ close, items, open }: ModalProps) => {
     const userName = event.currentTarget.user_name.value;
     const userAge = event.currentTarget.user_age.value;
     const userAddress = event.currentTarget.user_address.value;
+    const userComplement = event.currentTarget.user_address_complement.value;
     const userPhone = event.currentTarget.user_tel.value;
     const userEmail = event.currentTarget.user_name.value;
 
@@ -34,7 +35,15 @@ export const Modal = ({ close, items, open }: ModalProps) => {
       .send(
         apikey.SERVICE_ID,
         apikey.TEMPLATE_ID,
-        { message, userName, userAge, userAddress, userPhone, userEmail },
+        {
+          message,
+          userName,
+          userAge,
+          userAddress,
+          userPhone,
+          userEmail,
+          userComplement,
+        },
         apikey.USER_ID
       )
       .then(
@@ -61,6 +70,11 @@ export const Modal = ({ close, items, open }: ModalProps) => {
           <input name="user_name" placeholder="Nome" type="text" />
           <input name="user_age" placeholder="Idade" type="number" />
           <input name="user_address" placeholder="Endereço" type="text" />
+          <input
+            name="user_address_complement"
+            placeholder="Complemento"
+            type="text"
+          />
           <input name="user_tel" placeholder="Telefone" type="tel" />
           <input name="user_email" placeholder="Email" type="email" />
           <input type="submit" value="Confirmar" />
