@@ -67,7 +67,7 @@ export const CardItem = ({ img, productList, title }: Props) => {
       <SelectedTypeQuantityEggs
         onChange={(e) => setFrequency(e.currentTarget.value)}
       >
-        <option value="0">Escolha a periocidade:</option>
+        <option value="0">Escolha a periodicidade:</option>
         {planFrequency.map((options) => (
           <option key={options} value={options}>
             {' '}

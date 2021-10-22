@@ -33,7 +33,7 @@ export const CardProductDescriptionEggs = styled.p`
 export const SelectedTypeQuantityEggs = styled.select`
   width: 220px;
   height: 45px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   border-radius: 8px;
   padding: 10px;
