@@ -44,7 +44,7 @@ const PurchaseProcessing: React.FC = () => {
     <PurchaseProcessingContainer>
       <PurchaseProcessingContent>
         <GiNestEggs color="#BF4904" size={80} />
-        <PurcharProcessingTitle>INCLUIR COMPLEMENTO</PurcharProcessingTitle>
+        <PurcharProcessingTitle>ESCOLHA O TIPO DOS OVOS</PurcharProcessingTitle>
       </PurchaseProcessingContent>
       <ArrowRight>
         {width >= 600 ? (

@@ -27,22 +27,21 @@ export const Modal = ({ close, items, open }: ModalProps) => {
     const userPhone = event.currentTarget.user_tel.value;
     const userEmail = event.currentTarget.user_name.value;
 
-    const message = `
-    Necessario entrar em contato com o/a ${userName} para realizar orçamento de ${items.product} para frequência ${items.frequency}
-    na quantidade de ${items.quantity}.
-    `;
     emailjs
       .send(
         apikey.SERVICE_ID,
         apikey.TEMPLATE_ID,
         {
-          message,
           userName,
           userAge,
           userAddress,
           userPhone,
           userEmail,
           userComplement,
+          eggsType: items.product,
+          eggsFrequency: items.frequency,
+          eggsQuantity: items.quantity.split('-')[0],
+          eggsPrice: items.quantity.split('-')[1],
         },
         apikey.USER_ID
       )
@@ -61,7 +60,9 @@ export const Modal = ({ close, items, open }: ModalProps) => {
         }
       );
   };
+
   if (!open) return <></>;
+
   return (
     <BackgroundStyled>
       <ContainerStyled>

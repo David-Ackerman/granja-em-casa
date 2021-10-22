@@ -54,7 +54,7 @@ export const CardItem = ({ img, productList, title }: Props) => {
         {productList.map((options) => (
           <option
             key={options.id}
-            value={`${options.quantityEggs} - ovos por R$ ${options.value}`}
+            value={`${options.quantityEggs}-${options.value}`}
           >
             {' '}
             {options.quantityEggs} - ovos{' '}
